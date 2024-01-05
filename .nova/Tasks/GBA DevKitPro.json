@@ -1,0 +1,18 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\nopen -a docker && while ! docker info > \/dev\/null 2>&1; do sleep 1 ; done\ndocker run --rm -v $(pwd):\/build devkitpro\/devkitarm make -C \/build"
+    },
+    "clean" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\nopen -a docker && while ! docker info > \/dev\/null 2>&1; do sleep 1 ; done\ndocker run --rm -v $(pwd):\/build devkitpro\/devkitarm make clean -C \/build"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\n\/Applications\/RetroArch.app\/Contents\/MacOS\/RetroArch -L ~\/Library\/Application\\ Support\/RetroArch\/cores\/gpsp_libretro.dylib build\/gba-template.gba"
+    }
+  },
+  "buildBeforeRunning" : true,
+  "openLogOnRun" : "fail"
+}
