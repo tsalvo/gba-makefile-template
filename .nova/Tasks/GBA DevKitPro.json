@@ -10,7 +10,7 @@
     },
     "run" : {
       "enabled" : true,
-      "script" : "#!\/bin\/sh\n\/Applications\/RetroArch.app\/Contents\/MacOS\/RetroArch -L ~\/Library\/Application\\ Support\/RetroArch\/cores\/gpsp_libretro.dylib build\/gba-template.gba"
+      "script" : "#!\/bin\/sh\n\/Applications\/RetroArch.app\/Contents\/MacOS\/RetroArch -L ~\/Library\/Application\\ Support\/RetroArch\/cores\/mgba_libretro.dylib build\/gba-template.gba"
     }
   },
   "buildBeforeRunning" : true,
